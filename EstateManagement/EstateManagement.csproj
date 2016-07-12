@@ -45,6 +45,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EstateEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EstateEdit.Designer.cs">
+      <DependentUpon>EstateEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EstateManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EstateManage.Designer.cs">
+      <DependentUpon>EstateManage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -53,6 +65,36 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RentForm.Designer.cs">
+      <DependentUpon>RentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReturnRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReturnRecord.Designer.cs">
+      <DependentUpon>ReturnRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TypeManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TypeManager.Designer.cs">
+      <DependentUpon>TypeManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserEdit.Designer.cs">
+      <DependentUpon>UserEdit.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="EstateEdit.resx">
+      <DependentUpon>EstateEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EstateManage.resx">
+      <DependentUpon>EstateManage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -65,6 +107,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="TypeManager.resx">
+      <DependentUpon>TypeManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserEdit.resx">
+      <DependentUpon>UserEdit.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
