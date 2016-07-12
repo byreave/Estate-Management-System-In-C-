@@ -1,0 +1,13 @@
+H:\Projects\EstateManagement\EstateManagement\bin\Debug\EstateManagement.exe.config
+H:\Projects\EstateManagement\EstateManagement\obj\Debug\EstateManagement.csprojResolveAssemblyReference.cache
+H:\Projects\EstateManagement\EstateManagement\obj\Debug\EstateManagement.Login.resources
+H:\Projects\EstateManagement\EstateManagement\obj\Debug\EstateManagement.Properties.Resources.resources
+H:\Projects\EstateManagement\EstateManagement\obj\Debug\EstateManagement.csproj.GenerateResource.Cache
+H:\Projects\EstateManagement\EstateManagement\bin\Debug\EstateManagement.exe
+H:\Projects\EstateManagement\EstateManagement\bin\Debug\EstateManagement.pdb
+H:\Projects\EstateManagement\EstateManagement\obj\Debug\EstateManagement.exe
+H:\Projects\EstateManagement\EstateManagement\obj\Debug\EstateManagement.pdb
+H:\Projects\EstateManagement\EstateManagement\bin\Debug\DAL.dll
+H:\Projects\EstateManagement\EstateManagement\bin\Debug\Entity.dll
+H:\Projects\EstateManagement\EstateManagement\bin\Debug\DAL.pdb
+H:\Projects\EstateManagement\EstateManagement\bin\Debug\Entity.pdb

@@ -1,0 +1,7 @@
+H:\Projects\EstateManagement\DAL\bin\Debug\DAL.dll
+H:\Projects\EstateManagement\DAL\bin\Debug\DAL.pdb
+H:\Projects\EstateManagement\DAL\bin\Debug\Entity.dll
+H:\Projects\EstateManagement\DAL\bin\Debug\Entity.pdb
+H:\Projects\EstateManagement\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+H:\Projects\EstateManagement\DAL\obj\Debug\DAL.dll
+H:\Projects\EstateManagement\DAL\obj\Debug\DAL.pdb
