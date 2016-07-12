@@ -9,8 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DAL;
 using Entity;
-using System.Data.SqlClient;
-using System.Configuration;
 
 namespace EstateManagement
 {

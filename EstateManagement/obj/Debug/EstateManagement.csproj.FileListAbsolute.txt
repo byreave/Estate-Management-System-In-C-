@@ -11,3 +11,6 @@ H:\Projects\EstateManagement\EstateManagement\bin\Debug\DAL.dll
 H:\Projects\EstateManagement\EstateManagement\bin\Debug\Entity.dll
 H:\Projects\EstateManagement\EstateManagement\bin\Debug\DAL.pdb
 H:\Projects\EstateManagement\EstateManagement\bin\Debug\Entity.pdb
+C:\Users\Byreave\Desktop\WorkingSpace\Estate-Management-System-In-C-\EstateManagement\bin\Debug\EstateManagement.exe.config
+C:\Users\Byreave\Desktop\WorkingSpace\Estate-Management-System-In-C-\EstateManagement\obj\Debug\EstateManagement.exe
+C:\Users\Byreave\Desktop\WorkingSpace\Estate-Management-System-In-C-\EstateManagement\obj\Debug\EstateManagement.pdb
