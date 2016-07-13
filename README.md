@@ -1,8 +1,9 @@
 # CSharp Final
 
 ##to do:
-+各种表的各种按钮功能<br>
-+归还记录搜索
++就差类型管理了~
+
++还有BLL= = sad face
 ##资产管理系统 
 三层架构设计<br>
 Pre + DAL + BLL<br>

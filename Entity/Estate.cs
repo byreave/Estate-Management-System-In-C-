@@ -11,7 +11,7 @@ namespace Entity
         public string EstateName { set; get; } //资产名称
         public string TypeBID { set; get; } //小类的ID
         public string Model { set; get; }   //型号
-        public float Price { set; get; }    //价格
+        public double Price { set; get; }    //价格
         public string PurchaseDate { set; get; } //购买日期
         public string Status { set; get; } // 状态
         public string Username { set; get; } //领用的用户

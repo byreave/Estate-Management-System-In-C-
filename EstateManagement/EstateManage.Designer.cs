@@ -49,6 +49,7 @@
             this.usrTab = new System.Windows.Forms.TabPage();
             this.dgvUser = new System.Windows.Forms.DataGridView();
             this.typeBtn = new System.Windows.Forms.Button();
+            this.refBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEstate)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.estTab.SuspendLayout();
@@ -104,6 +105,7 @@
             this.estAddBtn.TabIndex = 4;
             this.estAddBtn.Text = "添加资产";
             this.estAddBtn.UseVisualStyleBackColor = true;
+            this.estAddBtn.Click += new System.EventHandler(this.estAddBtn_Click);
             // 
             // estEditBtn
             // 
@@ -113,6 +115,7 @@
             this.estEditBtn.TabIndex = 5;
             this.estEditBtn.Text = "编辑信息";
             this.estEditBtn.UseVisualStyleBackColor = true;
+            this.estEditBtn.Click += new System.EventHandler(this.estEditBtn_Click);
             // 
             // estDelBtn
             // 
@@ -122,6 +125,7 @@
             this.estDelBtn.TabIndex = 6;
             this.estDelBtn.Text = "删除资产";
             this.estDelBtn.UseVisualStyleBackColor = true;
+            this.estDelBtn.Click += new System.EventHandler(this.estDelBtn_Click);
             // 
             // usrAddBtn
             // 
@@ -131,6 +135,7 @@
             this.usrAddBtn.TabIndex = 7;
             this.usrAddBtn.Text = "添加人员";
             this.usrAddBtn.UseVisualStyleBackColor = true;
+            this.usrAddBtn.Click += new System.EventHandler(this.usrAddBtn_Click);
             // 
             // usrEditBtn
             // 
@@ -140,6 +145,7 @@
             this.usrEditBtn.TabIndex = 8;
             this.usrEditBtn.Text = "编辑信息";
             this.usrEditBtn.UseVisualStyleBackColor = true;
+            this.usrEditBtn.Click += new System.EventHandler(this.usrEditBtn_Click);
             // 
             // usrDelBtn
             // 
@@ -149,6 +155,7 @@
             this.usrDelBtn.TabIndex = 9;
             this.usrDelBtn.Text = "删除人员";
             this.usrDelBtn.UseVisualStyleBackColor = true;
+            this.usrDelBtn.Click += new System.EventHandler(this.usrDelBtn_Click);
             // 
             // outBtn
             // 
@@ -156,8 +163,9 @@
             this.outBtn.Name = "outBtn";
             this.outBtn.Size = new System.Drawing.Size(75, 23);
             this.outBtn.TabIndex = 10;
-            this.outBtn.Text = "租出";
+            this.outBtn.Text = "资产出租";
             this.outBtn.UseVisualStyleBackColor = true;
+            this.outBtn.Click += new System.EventHandler(this.outBtn_Click);
             // 
             // retBtn
             // 
@@ -167,6 +175,7 @@
             this.retBtn.TabIndex = 11;
             this.retBtn.Text = "查看出租信息";
             this.retBtn.UseVisualStyleBackColor = true;
+            this.retBtn.Click += new System.EventHandler(this.retBtn_Click);
             // 
             // button9
             // 
@@ -176,6 +185,7 @@
             this.button9.TabIndex = 12;
             this.button9.Text = "查看归还记录";
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // txtSrch
             // 
@@ -207,6 +217,7 @@
             this.srchBtn.TabIndex = 15;
             this.srchBtn.Text = "搜索";
             this.srchBtn.UseVisualStyleBackColor = true;
+            this.srchBtn.Click += new System.EventHandler(this.srchBtn_Click);
             // 
             // tabControl1
             // 
@@ -261,12 +272,24 @@
             this.typeBtn.TabIndex = 17;
             this.typeBtn.Text = "查看分类";
             this.typeBtn.UseVisualStyleBackColor = true;
+            this.typeBtn.Click += new System.EventHandler(this.typeBtn_Click);
+            // 
+            // refBtn
+            // 
+            this.refBtn.Location = new System.Drawing.Point(171, 15);
+            this.refBtn.Name = "refBtn";
+            this.refBtn.Size = new System.Drawing.Size(75, 23);
+            this.refBtn.TabIndex = 18;
+            this.refBtn.Text = "刷新";
+            this.refBtn.UseVisualStyleBackColor = true;
+            this.refBtn.Click += new System.EventHandler(this.refBtn_Click);
             // 
             // EstateManage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(594, 414);
+            this.Controls.Add(this.refBtn);
             this.Controls.Add(this.typeBtn);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.srchBtn);
@@ -320,5 +343,6 @@
         private System.Windows.Forms.TabPage usrTab;
         private System.Windows.Forms.DataGridView dgvUser;
         private System.Windows.Forms.Button typeBtn;
+        private System.Windows.Forms.Button refBtn;
     }
 }

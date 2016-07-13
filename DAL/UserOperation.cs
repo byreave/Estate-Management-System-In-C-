@@ -75,5 +75,14 @@ namespace DAL
             string sql = "SELECT * FROM UserInfo";
             return dbHelper.GetDataSet(sql);
         }
+        /// <summary>
+        /// 获取所有用户的名字
+        /// </summary>
+        /// <returns></returns>
+        public static DataSet GetAllUserName()
+        {
+            string sql = "SELECT Name From UserInfo";
+            return dbHelper.GetDataSet(sql);
+        }
     }
 }

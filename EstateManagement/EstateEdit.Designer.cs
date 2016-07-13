@@ -174,6 +174,7 @@
             this.saveBtn.TabIndex = 14;
             this.saveBtn.Text = "确定";
             this.saveBtn.UseVisualStyleBackColor = true;
+            this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
             // 
             // cancleBtn
             // 
@@ -183,6 +184,7 @@
             this.cancleBtn.TabIndex = 15;
             this.cancleBtn.Text = "取消";
             this.cancleBtn.UseVisualStyleBackColor = true;
+            this.cancleBtn.Click += new System.EventHandler(this.cancleBtn_Click);
             // 
             // EstateEdit
             // 
@@ -207,6 +209,7 @@
             this.Controls.Add(this.label1);
             this.Name = "EstateEdit";
             this.Text = "EstateEdit";
+            this.Load += new System.EventHandler(this.EstateEdit_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

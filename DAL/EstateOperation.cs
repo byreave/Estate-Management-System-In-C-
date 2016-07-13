@@ -174,9 +174,11 @@ namespace DAL
             if(result > 0)
             {
                 //插入归还记录表
+                string delSql = "DELETE * FROM EstateOut WHERE EID = '" + EstateID + "'";
+                int result1 = dbHelper.ExecuteCommand(delSql);
                 string insertSql = "INSERT INTO EstateReturn (EID, ReturnDate, AdminUser) VALUES('" + EstateID + "', '" + reDate + "', '" + admin + "'";
                 int result2 = dbHelper.ExecuteCommand(insertSql);
-                if(result2 > 0)
+                if(result2+result1 > 1)
                 {
                     return true;
                 }
@@ -249,6 +251,83 @@ namespace DAL
             string sql = "SELECT * FROM Estate";
             return dbHelper.GetDataSet(sql);
         }
+        /// <summary>
+        /// 获取所有大类
+        /// </summary>
+        /// <returns></returns>
+        public static DataSet GetAllTypeA()
+        {
+            string sql = "SELECT * FROM EstateTypeA";
+            return dbHelper.GetDataSet(sql);
+        }
+        /// <summary>
+        /// 根据大类获取所有小类
+        /// </summary>
+        /// <param name="typeAID"></param>
+        /// <returns></returns>
+        public static DataSet GetTypeBByTypeA(string typeAID)
+        {
+            string sqlB = "SELECT * FROM EstateTypeB WHERE TypeIDA = '" + typeAID + "'";
+            return dbHelper.GetDataSet(sqlB);
+        }
+        /// <summary>
+        /// 获取所有小类
+        /// </summary>
+        /// <returns></returns>
+        public static DataSet GetAllTypeB()
+        {
+            string sql = "SELECT TypeBName FROM EstateTypeB";
+            return dbHelper.GetDataSet(sql);
+        }
+        /// <summary>
+        /// 根据名字获取小类ID
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
+        public static string GetTypeBIDByName(string name)
+        {
+            string sql = "SELECT TypeBID FROM EstateTypeB WHERE TypeBName = '" + name + "'";
+            SqlDataReader dr = dbHelper.GetReader(sql);
+            return dr["TypeBID"].ToString();
+        }
+        /// <summary>
+        /// 获取所有正在出租的资产
+        /// </summary>
+        /// <returns></returns>
+        public static DataSet GetAllRentEstate()
+        {
+            string sql = "SELECT * FROM EstateOut";
+            return dbHelper.GetDataSet(sql);
+        }
 
+        /// <summary>
+        /// 根据ID搜索正在出租的资产
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public static DataSet GetRentEstateByID(string id)
+        {
+            string sql = "SELECT * FROM EstateOut WHERE EID = '" + id + "'";
+            return dbHelper.GetDataSet(sql);
+        }
+        /// <summary>
+        /// 获取所有归还记录
+        /// </summary>
+        /// <returns></returns>
+        public static DataSet GetAllReturnEstate()
+        {
+            string sql = "SELECT * FROM EstateReturn";
+            return dbHelper.GetDataSet(sql);
+        }
+        /// <summary>
+        /// 根据资产编号搜索资产归还记录
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public static DataSet GetReturnEstateByID(string id)
+        {
+            string sql = "SELECT * FROM EstateReturn WHERE EID = '" + id + "'";
+            return dbHelper.GetDataSet(sql);
+        }
     }
 }

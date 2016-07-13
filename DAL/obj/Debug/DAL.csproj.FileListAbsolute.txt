@@ -5,3 +5,10 @@ H:\Projects\EstateManagement\DAL\bin\Debug\Entity.pdb
 H:\Projects\EstateManagement\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
 H:\Projects\EstateManagement\DAL\obj\Debug\DAL.dll
 H:\Projects\EstateManagement\DAL\obj\Debug\DAL.pdb
+C:\Users\Byreave\Desktop\WorkingSpace\Estate-Management-System-In-C-\DAL\bin\Debug\DAL.dll
+C:\Users\Byreave\Desktop\WorkingSpace\Estate-Management-System-In-C-\DAL\bin\Debug\DAL.pdb
+C:\Users\Byreave\Desktop\WorkingSpace\Estate-Management-System-In-C-\DAL\bin\Debug\Entity.dll
+C:\Users\Byreave\Desktop\WorkingSpace\Estate-Management-System-In-C-\DAL\bin\Debug\Entity.pdb
+C:\Users\Byreave\Desktop\WorkingSpace\Estate-Management-System-In-C-\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\Byreave\Desktop\WorkingSpace\Estate-Management-System-In-C-\DAL\obj\Debug\DAL.dll
+C:\Users\Byreave\Desktop\WorkingSpace\Estate-Management-System-In-C-\DAL\obj\Debug\DAL.pdb

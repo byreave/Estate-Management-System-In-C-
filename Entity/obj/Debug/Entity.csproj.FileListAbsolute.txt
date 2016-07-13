@@ -2,3 +2,8 @@ H:\Projects\EstateManagement\Entity\bin\Debug\Entity.dll
 H:\Projects\EstateManagement\Entity\bin\Debug\Entity.pdb
 H:\Projects\EstateManagement\Entity\obj\Debug\Entity.dll
 H:\Projects\EstateManagement\Entity\obj\Debug\Entity.pdb
+C:\Users\Byreave\Desktop\WorkingSpace\Estate-Management-System-In-C-\Entity\bin\Debug\Entity.dll
+C:\Users\Byreave\Desktop\WorkingSpace\Estate-Management-System-In-C-\Entity\bin\Debug\Entity.pdb
+C:\Users\Byreave\Desktop\WorkingSpace\Estate-Management-System-In-C-\Entity\obj\Debug\Entity.csprojResolveAssemblyReference.cache
+C:\Users\Byreave\Desktop\WorkingSpace\Estate-Management-System-In-C-\Entity\obj\Debug\Entity.dll
+C:\Users\Byreave\Desktop\WorkingSpace\Estate-Management-System-In-C-\Entity\obj\Debug\Entity.pdb

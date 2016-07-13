@@ -48,5 +48,11 @@ namespace DAL
             }
         }
 
+        public static DataSet GetAllAdmin()
+        {
+            string sql = "SELECT Username FROM Admin";
+            return dbHelper.GetDataSet(sql);
+        }
+
     }
 }

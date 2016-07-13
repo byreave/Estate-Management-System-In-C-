@@ -94,6 +94,7 @@
             this.saveBtn.TabIndex = 6;
             this.saveBtn.Text = "确定";
             this.saveBtn.UseVisualStyleBackColor = true;
+            this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
             // 
             // cancleBtn
             // 
@@ -103,6 +104,7 @@
             this.cancleBtn.TabIndex = 7;
             this.cancleBtn.Text = "取消";
             this.cancleBtn.UseVisualStyleBackColor = true;
+            this.cancleBtn.Click += new System.EventHandler(this.cancleBtn_Click);
             // 
             // UserEdit
             // 

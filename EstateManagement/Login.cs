@@ -16,6 +16,7 @@ namespace EstateManagement
     {
         public Login()
         {
+
             InitializeComponent();
         }
 
@@ -40,12 +41,15 @@ namespace EstateManagement
             a.Password = password;
             if(AdminOperation.Login(a))
             {
-                MessageBox.Show("GOOD");
+                EstateManage em = new EstateManage(a.Username);
+                em.Show();
+                Close();
             }
             else
             {
-                MessageBox.Show("FUCKU");
+                MessageBox.Show("账户名密码不正确");
             }
         }
+
     }
 }
