@@ -190,6 +190,12 @@ namespace EstateManagement
             refreshUser();
         }
 
+        private void changeBtn_Click(object sender, EventArgs e)
+        {
+            ChangePassword cp = new ChangePassword(admin);
+            cp.Show();
+        }
+
         
 
         

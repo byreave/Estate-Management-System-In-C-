@@ -29,3 +29,8 @@ C:\Users\Byreave\Desktop\WorkingSpace\Estate-Management-System-In-C-\EstateManag
 C:\Users\Byreave\Desktop\WorkingSpace\Estate-Management-System-In-C-\EstateManagement\obj\Debug\EstateManagement.TypeManager.resources
 C:\Users\Byreave\Desktop\WorkingSpace\Estate-Management-System-In-C-\EstateManagement\obj\Debug\EstateManagement.UserEdit.resources
 C:\Users\Byreave\Desktop\WorkingSpace\Estate-Management-System-In-C-\EstateManagement\obj\Debug\EstateManagement.csproj.GenerateResource.Cache
+C:\Users\Byreave\Desktop\WorkingSpace\Estate-Management-System-In-C-\EstateManagement\obj\Debug\EstateManagement.RentForm.resources
+C:\Users\Byreave\Desktop\WorkingSpace\Estate-Management-System-In-C-\EstateManagement\obj\Debug\EstateManagement.ReturnRecord.resources
+C:\Users\Byreave\Desktop\WorkingSpace\Estate-Management-System-In-C-\EstateManagement\bin\Debug\BLL.dll
+C:\Users\Byreave\Desktop\WorkingSpace\Estate-Management-System-In-C-\EstateManagement\bin\Debug\BLL.pdb
+C:\Users\Byreave\Desktop\WorkingSpace\Estate-Management-System-In-C-\EstateManagement\obj\Debug\EstateManagement.ChangePassword.resources

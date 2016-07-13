@@ -50,6 +50,7 @@
             this.dgvUser = new System.Windows.Forms.DataGridView();
             this.typeBtn = new System.Windows.Forms.Button();
             this.refBtn = new System.Windows.Forms.Button();
+            this.changeBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEstate)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.estTab.SuspendLayout();
@@ -284,11 +285,22 @@
             this.refBtn.UseVisualStyleBackColor = true;
             this.refBtn.Click += new System.EventHandler(this.refBtn_Click);
             // 
+            // changeBtn
+            // 
+            this.changeBtn.Location = new System.Drawing.Point(260, 379);
+            this.changeBtn.Name = "changeBtn";
+            this.changeBtn.Size = new System.Drawing.Size(75, 23);
+            this.changeBtn.TabIndex = 19;
+            this.changeBtn.Text = "修改密码";
+            this.changeBtn.UseVisualStyleBackColor = true;
+            this.changeBtn.Click += new System.EventHandler(this.changeBtn_Click);
+            // 
             // EstateManage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(594, 414);
+            this.Controls.Add(this.changeBtn);
             this.Controls.Add(this.refBtn);
             this.Controls.Add(this.typeBtn);
             this.Controls.Add(this.tabControl1);
@@ -344,5 +356,6 @@
         private System.Windows.Forms.DataGridView dgvUser;
         private System.Windows.Forms.Button typeBtn;
         private System.Windows.Forms.Button refBtn;
+        private System.Windows.Forms.Button changeBtn;
     }
 }

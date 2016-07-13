@@ -329,5 +329,43 @@ namespace DAL
             string sql = "SELECT * FROM EstateReturn WHERE EID = '" + id + "'";
             return dbHelper.GetDataSet(sql);
         }
+        /// <summary>
+        /// 删除大类 同时删除所有小类
+        /// </summary>
+        /// <param name="typeID"></param>
+        /// <returns></returns>
+        public static bool TypeADelete(string typeID)
+        {
+            string delSqlA = "DELETE * FROM EstateTypeB Where TypeIDA = '"+typeID+"'";
+            string delSqlB = "DELETE * FROM EstateTypeA WHERE TypeID = '" + typeID + "'";
+            int result = dbHelper.ExecuteCommand(delSqlB);
+            int result2 = dbHelper.ExecuteCommand(delSqlA);
+            if(result > 0 && result2 > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        /// <summary>
+        /// 删除小类
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
+        public static bool TypeBDelete(string name)
+        {
+            string sql = "DELETE * FROM EstateTypeB WHERE TypeBName = '" + name + "'";
+            int result = dbHelper.ExecuteCommand(sql);
+            if(result > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }

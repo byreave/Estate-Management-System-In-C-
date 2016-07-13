@@ -28,44 +28,48 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dgvTypeA = new System.Windows.Forms.DataGridView();
+            this.dgvTypeB = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.TypeAAddBtn = new System.Windows.Forms.Button();
             this.TypeBAddBtn = new System.Windows.Forms.Button();
             this.delBtn = new System.Windows.Forms.Button();
             this.quitBtn = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.txtType = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.comTypeB = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTypeA)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTypeB)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvTypeA
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(13, 44);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(175, 150);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvTypeA.AllowUserToAddRows = false;
+            this.dgvTypeA.AllowUserToDeleteRows = false;
+            this.dgvTypeA.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvTypeA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTypeA.Location = new System.Drawing.Point(13, 44);
+            this.dgvTypeA.Name = "dgvTypeA";
+            this.dgvTypeA.ReadOnly = true;
+            this.dgvTypeA.RowTemplate.Height = 23;
+            this.dgvTypeA.Size = new System.Drawing.Size(175, 150);
+            this.dgvTypeA.TabIndex = 0;
+            this.dgvTypeA.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTypeA_CellClick);
             // 
-            // dataGridView2
+            // dgvTypeB
             // 
-            this.dataGridView2.AllowUserToAddRows = false;
-            this.dataGridView2.AllowUserToDeleteRows = false;
-            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(194, 44);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.RowTemplate.Height = 23;
-            this.dataGridView2.Size = new System.Drawing.Size(224, 150);
-            this.dataGridView2.TabIndex = 1;
-            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
+            this.dgvTypeB.AllowUserToAddRows = false;
+            this.dgvTypeB.AllowUserToDeleteRows = false;
+            this.dgvTypeB.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvTypeB.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTypeB.Location = new System.Drawing.Point(194, 44);
+            this.dgvTypeB.Name = "dgvTypeB";
+            this.dgvTypeB.ReadOnly = true;
+            this.dgvTypeB.RowTemplate.Height = 23;
+            this.dgvTypeB.Size = new System.Drawing.Size(224, 150);
+            this.dgvTypeB.TabIndex = 1;
+            this.dgvTypeB.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
             // label1
             // 
@@ -87,57 +91,90 @@
             // 
             // TypeAAddBtn
             // 
-            this.TypeAAddBtn.Location = new System.Drawing.Point(15, 232);
+            this.TypeAAddBtn.Location = new System.Drawing.Point(15, 258);
             this.TypeAAddBtn.Name = "TypeAAddBtn";
             this.TypeAAddBtn.Size = new System.Drawing.Size(75, 23);
             this.TypeAAddBtn.TabIndex = 4;
             this.TypeAAddBtn.Text = "添加大类";
             this.TypeAAddBtn.UseVisualStyleBackColor = true;
+            this.TypeAAddBtn.Click += new System.EventHandler(this.TypeAAddBtn_Click);
             // 
             // TypeBAddBtn
             // 
-            this.TypeBAddBtn.Location = new System.Drawing.Point(113, 232);
+            this.TypeBAddBtn.Location = new System.Drawing.Point(113, 258);
             this.TypeBAddBtn.Name = "TypeBAddBtn";
             this.TypeBAddBtn.Size = new System.Drawing.Size(75, 23);
             this.TypeBAddBtn.TabIndex = 5;
             this.TypeBAddBtn.Text = "添加小类";
             this.TypeBAddBtn.UseVisualStyleBackColor = true;
+            this.TypeBAddBtn.Click += new System.EventHandler(this.TypeBAddBtn_Click);
             // 
             // delBtn
             // 
-            this.delBtn.Location = new System.Drawing.Point(220, 232);
+            this.delBtn.Location = new System.Drawing.Point(238, 258);
             this.delBtn.Name = "delBtn";
             this.delBtn.Size = new System.Drawing.Size(75, 23);
             this.delBtn.TabIndex = 6;
             this.delBtn.Text = "删除";
             this.delBtn.UseVisualStyleBackColor = true;
+            this.delBtn.Click += new System.EventHandler(this.delBtn_Click);
             // 
             // quitBtn
             // 
-            this.quitBtn.Location = new System.Drawing.Point(322, 232);
+            this.quitBtn.Location = new System.Drawing.Point(343, 258);
             this.quitBtn.Name = "quitBtn";
             this.quitBtn.Size = new System.Drawing.Size(75, 23);
             this.quitBtn.TabIndex = 7;
             this.quitBtn.Text = "退出";
             this.quitBtn.UseVisualStyleBackColor = true;
+            this.quitBtn.Click += new System.EventHandler(this.quitBtn_Click);
+            // 
+            // txtType
+            // 
+            this.txtType.Location = new System.Drawing.Point(62, 223);
+            this.txtType.Name = "txtType";
+            this.txtType.Size = new System.Drawing.Size(100, 21);
+            this.txtType.TabIndex = 8;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(195, 226);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(101, 12);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "选择大类添加小类";
+            // 
+            // comTypeB
+            // 
+            this.comTypeB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comTypeB.FormattingEnabled = true;
+            this.comTypeB.Location = new System.Drawing.Point(315, 223);
+            this.comTypeB.Name = "comTypeB";
+            this.comTypeB.Size = new System.Drawing.Size(87, 20);
+            this.comTypeB.TabIndex = 10;
             // 
             // TypeManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(430, 319);
+            this.Controls.Add(this.comTypeB);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtType);
             this.Controls.Add(this.quitBtn);
             this.Controls.Add(this.delBtn);
             this.Controls.Add(this.TypeBAddBtn);
             this.Controls.Add(this.TypeAAddBtn);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvTypeB);
+            this.Controls.Add(this.dgvTypeA);
             this.Name = "TypeManager";
             this.Text = "TypeManager";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            this.Load += new System.EventHandler(this.TypeManager_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTypeA)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTypeB)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -145,13 +182,16 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dgvTypeA;
+        private System.Windows.Forms.DataGridView dgvTypeB;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button TypeAAddBtn;
         private System.Windows.Forms.Button TypeBAddBtn;
         private System.Windows.Forms.Button delBtn;
         private System.Windows.Forms.Button quitBtn;
+        private System.Windows.Forms.TextBox txtType;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox comTypeB;
     }
 }

@@ -1,9 +1,11 @@
 # CSharp Final
 
 ##to do:
-+就差类型管理了~
++基本写完了 现在测试+DEBUG~
 
-+还有BLL= = sad face
++还有BLL= = sad face 。。这个就写了一个小的接口 MDZZ并不懂有什么用
+
++app.config中的数据库信息要改.
 ##资产管理系统 
 三层架构设计<br>
 Pre + DAL + BLL<br>
