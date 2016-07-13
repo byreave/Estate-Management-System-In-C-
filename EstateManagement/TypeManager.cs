@@ -47,6 +47,8 @@ namespace EstateManagement
 
         private void TypeManager_Load(object sender, EventArgs e)
         {
+            DataSet dsA = EstateOperation.GetAllTypeA();
+            dgvTypeA.DataSource = dsA.Tables[0].DefaultView;
             DataSet ds = EstateOperation.GetAllTypeA();
             comTypeB.DataSource = ds.Tables[0];
             comTypeB.DisplayMember = ds.Tables[0].Columns["TypeAName"].ToString();
@@ -90,7 +92,6 @@ namespace EstateManagement
                 EstateOperation.TypeBDelete(strB);
                 MessageBox.Show("删除小类成功");
                 refreshTypeB(str);
-
             }
             else
             {

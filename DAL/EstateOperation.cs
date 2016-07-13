@@ -18,7 +18,7 @@ namespace DAL
         /// <returns></returns>
         public static bool EstateTypeAAdd(string TypeAName)
         {
-            string sql = "INSERT INTO EstateTypeA (Name) VALUES ('" + TypeAName + "')";
+            string sql = "INSERT INTO EstateTypeA (TypeAName) VALUES ('" + TypeAName + "')";
             int result = dbHelper.ExecuteCommand(sql);
             if (result > 0)
             {
@@ -103,7 +103,7 @@ namespace DAL
         /// <returns></returns>
         public static bool EstateDelete(string EstateID)
         {
-            string sql = "DELETE * FROM Estate WHERE EID = '" + EstateID + "'";
+            string sql = "DELETE FROM Estate WHERE EID = '" + EstateID + "'";
 
             int result = dbHelper.ExecuteCommand(sql);
             if (result > 0)
@@ -134,10 +134,14 @@ namespace DAL
                 //查看资产是否被人占用
                 string selectIfAvailable = "SELECT Username, Status FROM Estate WHERE EID = '" + EstateID + "'";
                 SqlDataReader dr = dbHelper.GetReader(selectIfAvailable);
-                if(dr["Username"].ToString() != "")
-                    return 2;
-                if(dr["Status"] != "正常")
-                    return 3;
+                while(dr.Read())
+                {
+                    if (dr["Username"].ToString() != "")
+                        return 2;
+                    if (dr["Status"].ToString() != "正常")
+                        return 3;
+                }
+                dr.Close();
                 //插入租出资产的表
                 string sql = "INSERT INTO EstateOut (EID, OutDate, AdminUser, Usage, Comment) VALUES ('" + EstateID + "', '" + OutDate + "', '" + admin + "', '" + Usage + "', '" + comment + "')";
                 int result1 = dbHelper.ExecuteCommand(sql);
@@ -169,14 +173,14 @@ namespace DAL
         public static bool EstateReturn(string EstateID, string reDate, string admin)
         {
             //将资产设为无人占有
-            string sql = "UPDATE Estate SET Username = '' WHERE EstateID = '" + EstateID + "'";
+            string sql = "UPDATE Estate SET Username = '' WHERE EID = '" + EstateID + "'";
             int result = dbHelper.ExecuteCommand(sql);
             if(result > 0)
             {
                 //插入归还记录表
-                string delSql = "DELETE * FROM EstateOut WHERE EID = '" + EstateID + "'";
+                string delSql = "DELETE FROM EstateOut WHERE EID = '" + EstateID + "'";
                 int result1 = dbHelper.ExecuteCommand(delSql);
-                string insertSql = "INSERT INTO EstateReturn (EID, ReturnDate, AdminUser) VALUES('" + EstateID + "', '" + reDate + "', '" + admin + "'";
+                string insertSql = "INSERT INTO EstateReturn (EID, ReturnDate, AdminUser) VALUES('" + EstateID + "', '" + reDate + "', '" + admin + "')";
                 int result2 = dbHelper.ExecuteCommand(insertSql);
                 if(result2+result1 > 1)
                 {
@@ -263,12 +267,27 @@ namespace DAL
         /// <summary>
         /// 根据大类获取所有小类
         /// </summary>
-        /// <param name="typeAID"></param>
+        /// <param name="typeAname"></param>
         /// <returns></returns>
-        public static DataSet GetTypeBByTypeA(string typeAID)
+        public static DataSet GetTypeBByTypeA(string typeAname)
         {
-            string sqlB = "SELECT * FROM EstateTypeB WHERE TypeIDA = '" + typeAID + "'";
-            return dbHelper.GetDataSet(sqlB);
+            try
+            {
+                Convert.ToInt32(typeAname);//是数字就用ID搜索
+                return GetTypeBByTypeAID(typeAname);
+            }
+            catch
+            {
+                string sqlA = "SELECT TypeID FROM EstateTypeA WHERE TypeAName = '" + typeAname + "'";
+                string sqlB = "SELECT * FROM EstateTypeB WHERE TypeIDA IN (" + sqlA + ")";
+                return dbHelper.GetDataSet(sqlB);
+            }
+        }
+
+        public static DataSet GetTypeBByTypeAID(string typeAID)
+        {
+            string sql = "SELECT * FROM EstateTypeB WHERE TypeIDA = '" + typeAID + "'";
+            return dbHelper.GetDataSet(sql);
         }
         /// <summary>
         /// 获取所有小类
@@ -286,9 +305,16 @@ namespace DAL
         /// <returns></returns>
         public static string GetTypeBIDByName(string name)
         {
-            string sql = "SELECT TypeBID FROM EstateTypeB WHERE TypeBName = '" + name + "'";
+            string sql = "SELECT TypeIDB FROM EstateTypeB WHERE TypeBName = '" + name + "'";
             SqlDataReader dr = dbHelper.GetReader(sql);
-            return dr["TypeBID"].ToString();
+            string result = "";
+            while(dr.Read())
+            {
+                result = dr["TypeIDB"].ToString();
+
+            }
+            dr.Close();
+            return result;
         }
         /// <summary>
         /// 获取所有正在出租的资产
@@ -336,8 +362,8 @@ namespace DAL
         /// <returns></returns>
         public static bool TypeADelete(string typeID)
         {
-            string delSqlA = "DELETE * FROM EstateTypeB Where TypeIDA = '"+typeID+"'";
-            string delSqlB = "DELETE * FROM EstateTypeA WHERE TypeID = '" + typeID + "'";
+            string delSqlA = "DELETE FROM EstateTypeB Where TypeIDA = '"+typeID+"'";
+            string delSqlB = "DELETE FROM EstateTypeA WHERE TypeID = '" + typeID + "'";
             int result = dbHelper.ExecuteCommand(delSqlB);
             int result2 = dbHelper.ExecuteCommand(delSqlA);
             if(result > 0 && result2 > 0)
@@ -356,16 +382,27 @@ namespace DAL
         /// <returns></returns>
         public static bool TypeBDelete(string name)
         {
-            string sql = "DELETE * FROM EstateTypeB WHERE TypeBName = '" + name + "'";
+            int num;
+            string sql;
+            try
+            {
+                num = Convert.ToInt32(name);
+                sql = "DELETE FROM EstateTypeB WHERE TypeIDB = '" + name + "'";//是数字则按照编号删除
+            }
+            catch
+            {
+                sql = "DELETE FROM EstateTypeB WHERE TypeBName = '" + name + "'";
+            }
             int result = dbHelper.ExecuteCommand(sql);
-            if(result > 0)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+                if (result > 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            
         }
     }
 }

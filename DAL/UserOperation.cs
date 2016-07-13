@@ -55,7 +55,7 @@ namespace DAL
         /// <returns></returns>
         public static bool UserDelete(string id)
         {
-            string sql = "DELETE * FROM UserInfo WHERE UID = '" + id + "'";
+            string sql = "DELETE FROM UserInfo WHERE UID = '" + id + "'";
             int result = dbHelper.ExecuteCommand(sql);
             if (result > 0)
             {
