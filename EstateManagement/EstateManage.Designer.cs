@@ -321,6 +321,7 @@
             this.Controls.Add(this.label1);
             this.Name = "EstateManage";
             this.Text = "EstateManage";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.EstateManage_FormClosing);
             this.Load += new System.EventHandler(this.EstateManage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEstate)).EndInit();
             this.tabControl1.ResumeLayout(false);

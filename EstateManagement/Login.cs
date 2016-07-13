@@ -43,7 +43,7 @@ namespace EstateManagement
             {
                 EstateManage em = new EstateManage(a.Username);
                 em.Show();
-                Close();
+                Hide();
             }
             else
             {

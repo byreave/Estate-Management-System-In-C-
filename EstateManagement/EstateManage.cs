@@ -196,6 +196,11 @@ namespace EstateManagement
             cp.Show();
         }
 
+        private void EstateManage_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
         
 
         
