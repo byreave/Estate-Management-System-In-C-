@@ -46,6 +46,7 @@ namespace DAL
         {
             SqlCommand cmd = new SqlCommand(safeSql, Connection);
             int result = cmd.ExecuteNonQuery();
+            connection.Close();
             return result;
         }
         /// <summary>
@@ -58,7 +59,11 @@ namespace DAL
         {
             SqlCommand cmd = new SqlCommand(sql, Connection);
             cmd.Parameters.AddRange(values);
-            return cmd.ExecuteNonQuery();
+            int result = cmd.ExecuteNonQuery();
+
+            connection.Close();
+
+            return result;
         }
         /// <summary>
         /// 执行并返回执行结果中的第一列
@@ -69,6 +74,7 @@ namespace DAL
         {
             SqlCommand cmd = new SqlCommand(safeSql, Connection);
             object result = cmd.ExecuteScalar();
+            connection.Close();
             return result;
         }
         /// <summary>
@@ -82,6 +88,7 @@ namespace DAL
             SqlCommand cmd = new SqlCommand(sql, Connection);
             cmd.Parameters.AddRange(values);
             int result = Convert.ToInt32(cmd.ExecuteScalar());
+            connection.Close();
             return result;
         }
         /// <summary>
@@ -119,6 +126,7 @@ namespace DAL
             SqlCommand cmd = new SqlCommand(safeSql, Connection);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(ds);
+            connection.Close();
             return ds;
         }
         /// <summary>
@@ -134,6 +142,7 @@ namespace DAL
             cmd.Parameters.AddRange(values);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(ds);
+            connection.Close();
             return ds;
         }
     }

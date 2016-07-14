@@ -12,3 +12,10 @@ C:\Users\Byreave\Desktop\WorkingSpace\Estate-Management-System-In-C-\DAL\bin\Deb
 C:\Users\Byreave\Desktop\WorkingSpace\Estate-Management-System-In-C-\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
 C:\Users\Byreave\Desktop\WorkingSpace\Estate-Management-System-In-C-\DAL\obj\Debug\DAL.dll
 C:\Users\Byreave\Desktop\WorkingSpace\Estate-Management-System-In-C-\DAL\obj\Debug\DAL.pdb
+H:\Projects\EstateManagement\Estate-Management-System-In-C-\DAL\bin\Debug\DAL.dll
+H:\Projects\EstateManagement\Estate-Management-System-In-C-\DAL\bin\Debug\DAL.pdb
+H:\Projects\EstateManagement\Estate-Management-System-In-C-\DAL\bin\Debug\Entity.dll
+H:\Projects\EstateManagement\Estate-Management-System-In-C-\DAL\bin\Debug\Entity.pdb
+H:\Projects\EstateManagement\Estate-Management-System-In-C-\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+H:\Projects\EstateManagement\Estate-Management-System-In-C-\DAL\obj\Debug\DAL.dll
+H:\Projects\EstateManagement\Estate-Management-System-In-C-\DAL\obj\Debug\DAL.pdb

@@ -44,8 +44,8 @@ namespace EstateManagement
             string usage = txtUsage.Text;
             string comm = txtComm.Text;
 
-            EstateOperation.EstateOut(user, estateID, odate, usage, comm, admin);
-            MessageBox.Show("成功！");
+            int result = EstateOperation.EstateOut(user, estateID, odate, usage, comm, admin);
+            MessageBox.Show(result.ToString());
             Close();
         }
 

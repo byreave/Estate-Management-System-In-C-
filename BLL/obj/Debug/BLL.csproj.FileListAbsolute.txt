@@ -7,3 +7,12 @@ C:\Users\Byreave\Desktop\WorkingSpace\Estate-Management-System-In-C-\BLL\bin\Deb
 C:\Users\Byreave\Desktop\WorkingSpace\Estate-Management-System-In-C-\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
 C:\Users\Byreave\Desktop\WorkingSpace\Estate-Management-System-In-C-\BLL\obj\Debug\BLL.dll
 C:\Users\Byreave\Desktop\WorkingSpace\Estate-Management-System-In-C-\BLL\obj\Debug\BLL.pdb
+H:\Projects\EstateManagement\Estate-Management-System-In-C-\BLL\bin\Debug\BLL.dll
+H:\Projects\EstateManagement\Estate-Management-System-In-C-\BLL\bin\Debug\BLL.pdb
+H:\Projects\EstateManagement\Estate-Management-System-In-C-\BLL\bin\Debug\DAL.dll
+H:\Projects\EstateManagement\Estate-Management-System-In-C-\BLL\bin\Debug\Entity.dll
+H:\Projects\EstateManagement\Estate-Management-System-In-C-\BLL\bin\Debug\DAL.pdb
+H:\Projects\EstateManagement\Estate-Management-System-In-C-\BLL\bin\Debug\Entity.pdb
+H:\Projects\EstateManagement\Estate-Management-System-In-C-\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+H:\Projects\EstateManagement\Estate-Management-System-In-C-\BLL\obj\Debug\BLL.dll
+H:\Projects\EstateManagement\Estate-Management-System-In-C-\BLL\obj\Debug\BLL.pdb

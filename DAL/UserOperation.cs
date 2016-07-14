@@ -36,7 +36,7 @@ namespace DAL
         /// <returns></returns>
         public static bool UserEdit(User newInfo, string id)
         {
-            string sql = "UPDATE UserInfo SET Name = '" + newInfo.Name + "', Career = '" + newInfo.Career + "', '" + newInfo.Comment + "'";
+            string sql = "UPDATE UserInfo SET Name = '" + newInfo.Name + "', Career = '" + newInfo.Career + "', Comment = '" + newInfo.Comment + "'";
             sql += " WHERE UID = '" + id + "'";
             int result = dbHelper.ExecuteCommand(sql);
             if(result > 0)

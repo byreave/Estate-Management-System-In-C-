@@ -137,9 +137,15 @@ namespace DAL
                 while(dr.Read())
                 {
                     if (dr["Username"].ToString() != "")
+                    {
+                        dr.Close();
                         return 2;
+                    }
                     if (dr["Status"].ToString() != "正常")
+                    {
+                        dr.Close();
                         return 3;
+                    }
                 }
                 dr.Close();
                 //插入租出资产的表
