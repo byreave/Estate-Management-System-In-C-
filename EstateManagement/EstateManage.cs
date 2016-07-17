@@ -21,11 +21,15 @@ namespace EstateManagement
             admin = a;
             InitializeComponent();
             data = new Dictionary<string, DataSet>();
+            data["Estate"] = new DataSet();
+            data["User"] = new DataSet();
         }
 
         private void EstateManage_Load(object sender, EventArgs e)
         {
             //初始化列表
+            data["User"] = UserOperation.GetAllUser();
+            data["Estate"] = EstateOperation.GetAllEstate();
             refreshEstate();
             refreshUser();
         }

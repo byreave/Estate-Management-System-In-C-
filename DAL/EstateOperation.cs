@@ -129,7 +129,7 @@ namespace DAL
         /// <param name="Usage"></param>
         /// <param name="comment"></param>
         /// <param name="admin"></param>
-        /// <returns>1成功 2被占用 3状态不正常 0数据库操作失败</returns>
+        /// <returns>1成功 2被占用 3状态不正常 0数据库操作失败 4无该用户</returns>
         public static int EstateOut(string Username, string EstateID, string OutDate, string Usage, string comment, string admin)
         {
             //先查询是否有该用户
@@ -172,7 +172,7 @@ namespace DAL
             else
             {
                 //throw (new Exception("No Such User"));
-                return 5;
+                return 4;
             }
         }
         /// <summary>

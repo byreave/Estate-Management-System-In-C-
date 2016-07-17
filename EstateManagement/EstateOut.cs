@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DAL;
+using BLL;
 
 namespace EstateManagement
 {
@@ -44,8 +45,8 @@ namespace EstateManagement
             string usage = txtUsage.Text;
             string comm = txtComm.Text;
 
-            int result = EstateOperation.EstateOut(user, estateID, odate, usage, comm, admin);
-            MessageBox.Show(result.ToString());
+            string result = EstateInfo.CheckEstateOutInfo(user, estateID, odate, usage, comm, admin); //通过BLL获取返回数值
+            MessageBox.Show(result);
             Close();
         }
 
