@@ -8,16 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DAL;
+using Entity;
 
 namespace EstateManagement
 {
     public partial class EstateManage : Form
     {
-        string admin;
+        string admin;//登陆的管理员的用户名
+        Dictionary<string, DataSet> data; //用来存储获取来的数据
         public EstateManage(string a)
         {
             admin = a;
             InitializeComponent();
+            data = new Dictionary<string, DataSet>();
         }
 
         private void EstateManage_Load(object sender, EventArgs e)
@@ -31,8 +34,8 @@ namespace EstateManagement
         /// </summary>
         private void refreshEstate()
         {
-            DataSet ds = EstateOperation.GetAllEstate();
-            dgvEstate.DataSource = ds.Tables[0].DefaultView;
+            //DataSet ds = EstateOperation.GetAllEstate();
+            dgvEstate.DataSource = data["Estate"].Tables[0].DefaultView;
         }
         /// <summary>
         /// 根据数据源刷新资产列表
@@ -47,8 +50,8 @@ namespace EstateManagement
         /// </summary>
         private void refreshUser()
         {
-            DataSet ds = UserOperation.GetAllUser();
-            dgvUser.DataSource = ds.Tables[0].DefaultView;
+            //DataSet ds = UserOperation.GetAllUser();
+            dgvUser.DataSource = data["User"].Tables[0].DefaultView;
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -186,6 +189,8 @@ namespace EstateManagement
 
         private void refBtn_Click(object sender, EventArgs e)
         {
+            data["User"] = UserOperation.GetAllUser();
+            data["Estate"] = EstateOperation.GetAllEstate();
             refreshEstate();
             refreshUser();
         }

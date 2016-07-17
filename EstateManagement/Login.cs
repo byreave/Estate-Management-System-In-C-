@@ -16,7 +16,6 @@ namespace EstateManagement
     {
         public Login()
         {
-
             InitializeComponent();
         }
 

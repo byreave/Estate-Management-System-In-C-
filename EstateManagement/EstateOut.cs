@@ -14,7 +14,7 @@ namespace EstateManagement
     public partial class EstateOut : Form
     {
         string estateID;//记录要出租的资产
-        string admin;
+        string admin; //登陆的管理员的用户名
         public EstateOut(string eid, string ad)
         {
             estateID = eid;

@@ -64,8 +64,11 @@ namespace DAL
         public static bool EstateAdd(Estate newEstate)
         {
             string sql = "INSERT INTO Estate (EstateName, TypeBID, Model, Price, PurchaseDate, Status, Username, Comment)";
-            sql += " VALUES('"+newEstate.EstateName+"', '"+newEstate.TypeBID+"', '"+newEstate.Model+"', '"+newEstate.Price.ToString()+"', '"+newEstate.PurchaseDate+"', '"+newEstate.Status+"', '"+newEstate.Username+"', '"+newEstate.Comment+"')";
-            int result = dbHelper.ExecuteCommand(sql);
+            sql += " VALUES(@EstateName, '" + newEstate.TypeBID + "', @Model, @Price, '" + newEstate.PurchaseDate + "', '" + newEstate.Status + "', '" + newEstate.Username + "', @Comment)";
+            //加入防注入
+            //sql += " VALUES('"+newEstate.EstateName+"', '"+newEstate.TypeBID+"', '"+newEstate.Model+"', '"+newEstate.Price.ToString()+"', '"+newEstate.PurchaseDate+"', '"+newEstate.Status+"', '"+newEstate.Username+"', '"+newEstate.Comment+"')";
+            SqlParameter[] paras = new SqlParameter[]{new SqlParameter("@EstateName", newEstate.EstateName), new SqlParameter("@Model", newEstate.Model), new SqlParameter("@Price", newEstate.Price.ToString()), new SqlParameter("@Comment", newEstate.Comment)};
+            int result = dbHelper.ExecuteCommand(sql, paras);
             if (result > 0)
             {
                 return true;
@@ -83,10 +86,12 @@ namespace DAL
         /// <returns></returns>
         public static bool EstateEdit(Estate editEstate, string EstateID)
         {
-            string sql = "UPDATE Estate SET EstateName = '"+editEstate.EstateName+"', TypeBID = '"+editEstate.TypeBID+"', Model='"+editEstate.Model+"', Price='"+editEstate.Price.ToString()+"', PurchaseDate='"+editEstate.PurchaseDate+"', Status='"+editEstate.Status+"', Username='"+editEstate.Username+"', Comment = '"+editEstate.Comment+"'";
+            string sql = "UPDATE Estate SET EstateName = @EstateName, TypeBID = '"+editEstate.TypeBID+"', Model=@Model, Price=@Price, PurchaseDate='"+editEstate.PurchaseDate+"', Status='"+editEstate.Status+"', Username='"+editEstate.Username+"', Comment = @Comment";
             sql += "WHERE EID = '"+EstateID+"'";
+            //加入防注入
+            SqlParameter[] paras = new SqlParameter[] { new SqlParameter("@EstateName", editEstate.EstateName), new SqlParameter("@Model", editEstate.Model), new SqlParameter("@Price", editEstate.Price.ToString()), new SqlParameter("@Comment", editEstate.Comment) };
 
-            int result = dbHelper.ExecuteCommand(sql);
+            int result = dbHelper.ExecuteCommand(sql, paras);
             if (result > 0)
             {
                 return true;
@@ -149,8 +154,9 @@ namespace DAL
                 }
                 dr.Close();
                 //插入租出资产的表
-                string sql = "INSERT INTO EstateOut (EID, OutDate, AdminUser, Usage, Comment) VALUES ('" + EstateID + "', '" + OutDate + "', '" + admin + "', '" + Usage + "', '" + comment + "')";
-                int result1 = dbHelper.ExecuteCommand(sql);
+                string sql = "INSERT INTO EstateOut (EID, OutDate, AdminUser, Usage, Comment) VALUES ('" + EstateID + "', '" + OutDate + "', '" + admin + "', @Usage, @Comment)";
+                SqlParameter[] paras = new SqlParameter[]{new SqlParameter("@Usage", Usage), new SqlParameter("@Comment", comment)};
+                int result1 = dbHelper.ExecuteCommand(sql, paras);
                 //把用户名字插入资产信息的表
                 sql = "UPDATE Estate SET Username = '"+Username+"' WHERE EID = '"+EstateID+"'";
                 int result2 = dbHelper.ExecuteCommand(sql);

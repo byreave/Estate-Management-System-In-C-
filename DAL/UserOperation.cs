@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Entity;
 using System.Data;
+using System.Data.SqlClient;
 
 namespace DAL
 {
@@ -17,8 +18,11 @@ namespace DAL
         /// <returns></returns>
         public static bool UserAdd(User newUser)
         {
-            string sql = "INSERT INTO UserInfo (Name, Career, Comment) VALUES ('" + newUser.Name + "', '" + newUser.Career + "', '" + newUser.Comment + "')";
-            int result = dbHelper.ExecuteCommand(sql);
+            //string sql = "INSERT INTO UserInfo (Name, Career, Comment) VALUES ('" + newUser.Name + "', '" + newUser.Career + "', '" + newUser.Comment + "')";
+            string sql = "INSERT INTO UserInfo (Name, Career, Comment) VALUES (@Name, @Career, @Comment)";
+            //加入防注入
+            SqlParameter[] paras = new SqlParameter[] { new SqlParameter("@Name", newUser.Name), new SqlParameter("@Career", newUser.Career), new SqlParameter("@Comment", newUser.Comment) };
+            int result = dbHelper.ExecuteCommand(sql, paras);
             if (result > 0)
             {
                 return true;
@@ -36,9 +40,13 @@ namespace DAL
         /// <returns></returns>
         public static bool UserEdit(User newInfo, string id)
         {
-            string sql = "UPDATE UserInfo SET Name = '" + newInfo.Name + "', Career = '" + newInfo.Career + "', Comment = '" + newInfo.Comment + "'";
+            //string sql = "UPDATE UserInfo SET Name = '" + newInfo.Name + "', Career = '" + newInfo.Career + "', Comment = '" + newInfo.Comment + "'";
+            string sql = "UPDATE UserInfo SET Name = @Name, Career = @Career, Comment = @Comment";
             sql += " WHERE UID = '" + id + "'";
-            int result = dbHelper.ExecuteCommand(sql);
+            //加入防注入
+            SqlParameter[] paras = new SqlParameter[] { new SqlParameter("@Name", newInfo.Name), new SqlParameter("@Career", newInfo.Career), new SqlParameter("@Comment", newInfo.Comment) };
+
+            int result = dbHelper.ExecuteCommand(sql, paras);
             if(result > 0)
             {
                 return true;
