@@ -41,7 +41,7 @@ namespace DAL
         public static bool ModifyPassword(string Username, string newPwd)
         {
             //string sql = "UPDATE TABLE Admin SET Password = '" + newPwd + "' WHERE Username = '" + Username + "'";
-            string sql = "UPDATE TABLE Admin SET Password = @Password WHERE Username = @Username";  //加入防注入
+            string sql = "UPDATE Admin SET Password = @Password WHERE Username = @Username";  //加入防注入
             SqlParameter[] paras = new SqlParameter[] { new SqlParameter("@Username", Username), new SqlParameter("@Password", newPwd) };
 
             //int result = dbHelper.ExecuteCommand(sql);
