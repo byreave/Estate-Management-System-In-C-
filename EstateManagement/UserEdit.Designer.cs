@@ -36,6 +36,7 @@
             this.txtComm = new System.Windows.Forms.TextBox();
             this.saveBtn = new System.Windows.Forms.Button();
             this.cancleBtn = new System.Windows.Forms.Button();
+            this.skinEngine1 = new Sunisoft.IrisSkin.SkinEngine();
             this.SuspendLayout();
             // 
             // label1
@@ -106,6 +107,15 @@
             this.cancleBtn.UseVisualStyleBackColor = true;
             this.cancleBtn.Click += new System.EventHandler(this.cancleBtn_Click);
             // 
+            // skinEngine1
+            // 
+            this.skinEngine1.@__DrawButtonFocusRectangle = true;
+            this.skinEngine1.DisabledButtonTextColor = System.Drawing.Color.Gray;
+            this.skinEngine1.DisabledMenuFontColor = System.Drawing.SystemColors.GrayText;
+            this.skinEngine1.InactiveCaptionColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.skinEngine1.SerialNumber = "";
+            this.skinEngine1.SkinFile = null;
+            // 
             // UserEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -120,6 +130,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "UserEdit";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UserEdit";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -136,5 +147,6 @@
         private System.Windows.Forms.TextBox txtComm;
         private System.Windows.Forms.Button saveBtn;
         private System.Windows.Forms.Button cancleBtn;
+        private Sunisoft.IrisSkin.SkinEngine skinEngine1;
     }
 }

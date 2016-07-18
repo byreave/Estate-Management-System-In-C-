@@ -38,6 +38,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.outBtn = new System.Windows.Forms.Button();
             this.cancelBtn = new System.Windows.Forms.Button();
+            this.skinEngine1 = new Sunisoft.IrisSkin.SkinEngine();
             this.SuspendLayout();
             // 
             // outDate
@@ -126,6 +127,15 @@
             this.cancelBtn.UseVisualStyleBackColor = true;
             this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
             // 
+            // skinEngine1
+            // 
+            this.skinEngine1.@__DrawButtonFocusRectangle = true;
+            this.skinEngine1.DisabledButtonTextColor = System.Drawing.Color.Gray;
+            this.skinEngine1.DisabledMenuFontColor = System.Drawing.SystemColors.GrayText;
+            this.skinEngine1.InactiveCaptionColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.skinEngine1.SerialNumber = "";
+            this.skinEngine1.SkinFile = null;
+            // 
             // EstateOut
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -142,6 +152,7 @@
             this.Controls.Add(this.txtUsage);
             this.Controls.Add(this.outDate);
             this.Name = "EstateOut";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "资产出租";
             this.Load += new System.EventHandler(this.EstateOut_Load);
             this.ResumeLayout(false);
@@ -161,5 +172,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button outBtn;
         private System.Windows.Forms.Button cancelBtn;
+        private Sunisoft.IrisSkin.SkinEngine skinEngine1;
     }
 }

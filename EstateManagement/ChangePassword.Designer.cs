@@ -35,32 +35,33 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.skinEngine1 = new Sunisoft.IrisSkin.SkinEngine();
             this.SuspendLayout();
             // 
             // txtOldPwd
             // 
-            this.txtOldPwd.Location = new System.Drawing.Point(92, 54);
+            this.txtOldPwd.Location = new System.Drawing.Point(106, 52);
             this.txtOldPwd.Name = "txtOldPwd";
             this.txtOldPwd.Size = new System.Drawing.Size(100, 21);
             this.txtOldPwd.TabIndex = 0;
             // 
             // txtNewPwd
             // 
-            this.txtNewPwd.Location = new System.Drawing.Point(92, 99);
+            this.txtNewPwd.Location = new System.Drawing.Point(106, 97);
             this.txtNewPwd.Name = "txtNewPwd";
             this.txtNewPwd.Size = new System.Drawing.Size(100, 21);
             this.txtNewPwd.TabIndex = 1;
             // 
             // txtPwdCon
             // 
-            this.txtPwdCon.Location = new System.Drawing.Point(92, 139);
+            this.txtPwdCon.Location = new System.Drawing.Point(106, 137);
             this.txtPwdCon.Name = "txtPwdCon";
             this.txtPwdCon.Size = new System.Drawing.Size(100, 21);
             this.txtPwdCon.TabIndex = 2;
             // 
             // okBtn
             // 
-            this.okBtn.Location = new System.Drawing.Point(92, 210);
+            this.okBtn.Location = new System.Drawing.Point(106, 208);
             this.okBtn.Name = "okBtn";
             this.okBtn.Size = new System.Drawing.Size(75, 23);
             this.okBtn.TabIndex = 3;
@@ -71,7 +72,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(30, 57);
+            this.label1.Location = new System.Drawing.Point(44, 55);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(41, 12);
             this.label1.TabIndex = 4;
@@ -80,7 +81,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(30, 102);
+            this.label2.Location = new System.Drawing.Point(44, 100);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(41, 12);
             this.label2.TabIndex = 5;
@@ -89,11 +90,20 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(30, 142);
+            this.label3.Location = new System.Drawing.Point(44, 140);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(53, 12);
             this.label3.TabIndex = 6;
             this.label3.Text = "确认密码";
+            // 
+            // skinEngine1
+            // 
+            this.skinEngine1.@__DrawButtonFocusRectangle = true;
+            this.skinEngine1.DisabledButtonTextColor = System.Drawing.Color.Gray;
+            this.skinEngine1.DisabledMenuFontColor = System.Drawing.SystemColors.GrayText;
+            this.skinEngine1.InactiveCaptionColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.skinEngine1.SerialNumber = "";
+            this.skinEngine1.SkinFile = null;
             // 
             // ChangePassword
             // 
@@ -108,6 +118,7 @@
             this.Controls.Add(this.txtNewPwd);
             this.Controls.Add(this.txtOldPwd);
             this.Name = "ChangePassword";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ChangePassword";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -123,5 +134,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private Sunisoft.IrisSkin.SkinEngine skinEngine1;
     }
 }

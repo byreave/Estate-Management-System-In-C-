@@ -39,6 +39,7 @@
             this.txtType = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.comTypeB = new System.Windows.Forms.ComboBox();
+            this.skinEngine1 = new Sunisoft.IrisSkin.SkinEngine();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTypeA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTypeB)).BeginInit();
             this.SuspendLayout();
@@ -50,9 +51,11 @@
             this.dgvTypeA.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvTypeA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTypeA.Location = new System.Drawing.Point(13, 44);
+            this.dgvTypeA.MultiSelect = false;
             this.dgvTypeA.Name = "dgvTypeA";
             this.dgvTypeA.ReadOnly = true;
             this.dgvTypeA.RowTemplate.Height = 23;
+            this.dgvTypeA.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvTypeA.Size = new System.Drawing.Size(175, 150);
             this.dgvTypeA.TabIndex = 0;
             this.dgvTypeA.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTypeA_CellClick);
@@ -64,9 +67,11 @@
             this.dgvTypeB.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvTypeB.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTypeB.Location = new System.Drawing.Point(194, 44);
+            this.dgvTypeB.MultiSelect = false;
             this.dgvTypeB.Name = "dgvTypeB";
             this.dgvTypeB.ReadOnly = true;
             this.dgvTypeB.RowTemplate.Height = 23;
+            this.dgvTypeB.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvTypeB.Size = new System.Drawing.Size(224, 150);
             this.dgvTypeB.TabIndex = 1;
             this.dgvTypeB.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
@@ -125,7 +130,7 @@
             this.quitBtn.Name = "quitBtn";
             this.quitBtn.Size = new System.Drawing.Size(75, 23);
             this.quitBtn.TabIndex = 7;
-            this.quitBtn.Text = "退出";
+            this.quitBtn.Text = "关闭";
             this.quitBtn.UseVisualStyleBackColor = true;
             this.quitBtn.Click += new System.EventHandler(this.quitBtn_Click);
             // 
@@ -154,6 +159,15 @@
             this.comTypeB.Size = new System.Drawing.Size(87, 20);
             this.comTypeB.TabIndex = 10;
             // 
+            // skinEngine1
+            // 
+            this.skinEngine1.@__DrawButtonFocusRectangle = true;
+            this.skinEngine1.DisabledButtonTextColor = System.Drawing.Color.Gray;
+            this.skinEngine1.DisabledMenuFontColor = System.Drawing.SystemColors.GrayText;
+            this.skinEngine1.InactiveCaptionColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.skinEngine1.SerialNumber = "";
+            this.skinEngine1.SkinFile = null;
+            // 
             // TypeManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -171,6 +185,7 @@
             this.Controls.Add(this.dgvTypeB);
             this.Controls.Add(this.dgvTypeA);
             this.Name = "TypeManager";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TypeManager";
             this.Load += new System.EventHandler(this.TypeManager_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTypeA)).EndInit();
@@ -193,5 +208,6 @@
         private System.Windows.Forms.TextBox txtType;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox comTypeB;
+        private Sunisoft.IrisSkin.SkinEngine skinEngine1;
     }
 }

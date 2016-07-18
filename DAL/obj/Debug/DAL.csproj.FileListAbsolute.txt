@@ -19,3 +19,17 @@ H:\Projects\EstateManagement\Estate-Management-System-In-C-\DAL\bin\Debug\Entity
 H:\Projects\EstateManagement\Estate-Management-System-In-C-\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
 H:\Projects\EstateManagement\Estate-Management-System-In-C-\DAL\obj\Debug\DAL.dll
 H:\Projects\EstateManagement\Estate-Management-System-In-C-\DAL\obj\Debug\DAL.pdb
+G:\C++class\Estate-Management-System-In-C--master\DAL\bin\Debug\DAL.dll
+G:\C++class\Estate-Management-System-In-C--master\DAL\bin\Debug\DAL.pdb
+G:\C++class\Estate-Management-System-In-C--master\DAL\bin\Debug\Entity.dll
+G:\C++class\Estate-Management-System-In-C--master\DAL\bin\Debug\Entity.pdb
+G:\C++class\Estate-Management-System-In-C--master\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+G:\C++class\Estate-Management-System-In-C--master\DAL\obj\Debug\DAL.dll
+G:\C++class\Estate-Management-System-In-C--master\DAL\obj\Debug\DAL.pdb
+C:\Users\Byreave\Desktop\WorkingSpace\.netFinale\Estate-Management-System-In-C--master\DAL\bin\Debug\DAL.dll
+C:\Users\Byreave\Desktop\WorkingSpace\.netFinale\Estate-Management-System-In-C--master\DAL\bin\Debug\DAL.pdb
+C:\Users\Byreave\Desktop\WorkingSpace\.netFinale\Estate-Management-System-In-C--master\DAL\bin\Debug\Entity.dll
+C:\Users\Byreave\Desktop\WorkingSpace\.netFinale\Estate-Management-System-In-C--master\DAL\bin\Debug\Entity.pdb
+C:\Users\Byreave\Desktop\WorkingSpace\.netFinale\Estate-Management-System-In-C--master\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\Byreave\Desktop\WorkingSpace\.netFinale\Estate-Management-System-In-C--master\DAL\obj\Debug\DAL.dll
+C:\Users\Byreave\Desktop\WorkingSpace\.netFinale\Estate-Management-System-In-C--master\DAL\obj\Debug\DAL.pdb

@@ -20,6 +20,13 @@ namespace EstateManagement
         {
             isEdit = isedit;
             InitializeComponent();
+
+            this.skinEngine1 = new Sunisoft.IrisSkin.SkinEngine(((System.ComponentModel.Component)(this)));
+            this.skinEngine1.SkinFile = Application.StartupPath + "//Skins//Longhorn.ssk";
+            //设置在其他界面中的效果同步
+            Sunisoft.IrisSkin.SkinEngine skinEngine = null;
+            skinEngine = new Sunisoft.IrisSkin.SkinEngine();
+            skinEngine.SkinAllForm = true;
         }
 
         public EstateEdit(bool isedit, string e)
@@ -27,6 +34,13 @@ namespace EstateManagement
             isEdit = isedit;
             eid = e;
             InitializeComponent();
+
+            this.skinEngine1 = new Sunisoft.IrisSkin.SkinEngine(((System.ComponentModel.Component)(this)));
+            this.skinEngine1.SkinFile = Application.StartupPath + "//Skins//Longhorn.ssk";
+            //设置在其他界面中的效果同步
+            Sunisoft.IrisSkin.SkinEngine skinEngine = null;
+            skinEngine = new Sunisoft.IrisSkin.SkinEngine();
+            skinEngine.SkinAllForm = true;
         }
 
         private void saveBtn_Click(object sender, EventArgs e)

@@ -228,7 +228,7 @@ namespace DAL
             else if(type == 'B')
             {
                 //直接查出所有符合条件的小类
-                catSqlB = "SELECT TypeBID FROM EstateTypeB WHERE TypeBName LIKE '%"+keyword+"%'";
+                catSqlB = "SELECT TypeIDB FROM EstateTypeB WHERE TypeBName LIKE '%"+keyword+"%'";
                 sql = "SELECT * FROM Estate WHERE TypeBID IN (" + catSqlB + ")";
             }
             else

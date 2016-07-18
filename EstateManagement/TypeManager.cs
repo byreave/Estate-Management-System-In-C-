@@ -16,6 +16,13 @@ namespace EstateManagement
         public TypeManager()
         {
             InitializeComponent();
+
+            this.skinEngine1 = new Sunisoft.IrisSkin.SkinEngine(((System.ComponentModel.Component)(this)));
+            this.skinEngine1.SkinFile = Application.StartupPath + "//Skins//Longhorn.ssk";
+            //设置在其他界面中的效果同步
+            Sunisoft.IrisSkin.SkinEngine skinEngine = null;
+            skinEngine = new Sunisoft.IrisSkin.SkinEngine();
+            skinEngine.SkinAllForm = true;
         }
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)

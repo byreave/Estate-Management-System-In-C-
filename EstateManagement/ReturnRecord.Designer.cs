@@ -34,6 +34,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.closeBtn = new System.Windows.Forms.Button();
             this.refBtn = new System.Windows.Forms.Button();
+            this.skinEngine1 = new Sunisoft.IrisSkin.SkinEngine();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReturn)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,7 +52,7 @@
             // 
             // srchBtn
             // 
-            this.srchBtn.Location = new System.Drawing.Point(307, 13);
+            this.srchBtn.Location = new System.Drawing.Point(278, 12);
             this.srchBtn.Name = "srchBtn";
             this.srchBtn.Size = new System.Drawing.Size(75, 23);
             this.srchBtn.TabIndex = 1;
@@ -61,7 +62,7 @@
             // 
             // txtSrch
             // 
-            this.txtSrch.Location = new System.Drawing.Point(189, 15);
+            this.txtSrch.Location = new System.Drawing.Point(160, 14);
             this.txtSrch.Name = "txtSrch";
             this.txtSrch.Size = new System.Drawing.Size(100, 21);
             this.txtSrch.TabIndex = 2;
@@ -69,7 +70,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(59, 18);
+            this.label1.Location = new System.Drawing.Point(40, 17);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(101, 12);
             this.label1.TabIndex = 3;
@@ -95,6 +96,15 @@
             this.refBtn.UseVisualStyleBackColor = true;
             this.refBtn.Click += new System.EventHandler(this.refBtn_Click);
             // 
+            // skinEngine1
+            // 
+            this.skinEngine1.@__DrawButtonFocusRectangle = true;
+            this.skinEngine1.DisabledButtonTextColor = System.Drawing.Color.Gray;
+            this.skinEngine1.DisabledMenuFontColor = System.Drawing.SystemColors.GrayText;
+            this.skinEngine1.InactiveCaptionColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.skinEngine1.SerialNumber = "";
+            this.skinEngine1.SkinFile = null;
+            // 
             // ReturnRecord
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -107,6 +117,7 @@
             this.Controls.Add(this.srchBtn);
             this.Controls.Add(this.dgvReturn);
             this.Name = "ReturnRecord";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ReturnRecord";
             this.Load += new System.EventHandler(this.ReturnRecord_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvReturn)).EndInit();
@@ -123,5 +134,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button closeBtn;
         private System.Windows.Forms.Button refBtn;
+        private Sunisoft.IrisSkin.SkinEngine skinEngine1;
     }
 }

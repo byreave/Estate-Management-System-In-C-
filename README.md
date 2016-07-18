@@ -3,7 +3,7 @@
 ##to do:
 +基本写完了 现在测试+DEBUG~
 
-+还有BLL= = sad face 。。这个就写了一个小的接口 MDZZ并不懂有什么用
++加入了更加好看的UI
 
 +app.config中的数据库信息要改.
 

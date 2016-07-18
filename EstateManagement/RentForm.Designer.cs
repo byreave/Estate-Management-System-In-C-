@@ -35,6 +35,7 @@
             this.txtSrch = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.returnDate = new System.Windows.Forms.DateTimePicker();
+            this.skinEngine1 = new Sunisoft.IrisSkin.SkinEngine();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRent)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,9 +46,11 @@
             this.dgvRent.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.dgvRent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRent.Location = new System.Drawing.Point(12, 68);
+            this.dgvRent.MultiSelect = false;
             this.dgvRent.Name = "dgvRent";
             this.dgvRent.ReadOnly = true;
             this.dgvRent.RowTemplate.Height = 23;
+            this.dgvRent.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvRent.Size = new System.Drawing.Size(391, 133);
             this.dgvRent.TabIndex = 0;
             // 
@@ -104,6 +107,15 @@
             this.returnDate.Size = new System.Drawing.Size(200, 21);
             this.returnDate.TabIndex = 6;
             // 
+            // skinEngine1
+            // 
+            this.skinEngine1.@__DrawButtonFocusRectangle = true;
+            this.skinEngine1.DisabledButtonTextColor = System.Drawing.Color.Gray;
+            this.skinEngine1.DisabledMenuFontColor = System.Drawing.SystemColors.GrayText;
+            this.skinEngine1.InactiveCaptionColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.skinEngine1.SerialNumber = "";
+            this.skinEngine1.SkinFile = null;
+            // 
             // RentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -117,6 +129,7 @@
             this.Controls.Add(this.retBtn);
             this.Controls.Add(this.dgvRent);
             this.Name = "RentForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RentForm";
             this.Load += new System.EventHandler(this.RentForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRent)).EndInit();
@@ -134,5 +147,6 @@
         private System.Windows.Forms.TextBox txtSrch;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker returnDate;
+        private Sunisoft.IrisSkin.SkinEngine skinEngine1;
     }
 }

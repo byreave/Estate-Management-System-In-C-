@@ -44,6 +44,7 @@
             this.comType = new System.Windows.Forms.ComboBox();
             this.saveBtn = new System.Windows.Forms.Button();
             this.cancleBtn = new System.Windows.Forms.Button();
+            this.skinEngine1 = new Sunisoft.IrisSkin.SkinEngine();
             this.SuspendLayout();
             // 
             // label1
@@ -186,6 +187,15 @@
             this.cancleBtn.UseVisualStyleBackColor = true;
             this.cancleBtn.Click += new System.EventHandler(this.cancleBtn_Click);
             // 
+            // skinEngine1
+            // 
+            this.skinEngine1.@__DrawButtonFocusRectangle = true;
+            this.skinEngine1.DisabledButtonTextColor = System.Drawing.Color.Gray;
+            this.skinEngine1.DisabledMenuFontColor = System.Drawing.SystemColors.GrayText;
+            this.skinEngine1.InactiveCaptionColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.skinEngine1.SerialNumber = "";
+            this.skinEngine1.SkinFile = null;
+            // 
             // EstateEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -208,6 +218,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "EstateEdit";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EstateEdit";
             this.Load += new System.EventHandler(this.EstateEdit_Load);
             this.ResumeLayout(false);
@@ -233,5 +244,6 @@
         private System.Windows.Forms.ComboBox comType;
         private System.Windows.Forms.Button saveBtn;
         private System.Windows.Forms.Button cancleBtn;
+        private Sunisoft.IrisSkin.SkinEngine skinEngine1;
     }
 }

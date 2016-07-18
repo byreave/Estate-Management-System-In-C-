@@ -20,6 +20,12 @@ namespace EstateManagement
         {
             admin = a;
             InitializeComponent();
+            this.skinEngine1 = new Sunisoft.IrisSkin.SkinEngine(((System.ComponentModel.Component)(this)));
+            this.skinEngine1.SkinFile = Application.StartupPath + "//Skins//CalmnessColor2.ssk";
+            //设置在其他界面中的效果同步
+            Sunisoft.IrisSkin.SkinEngine skinEngine = null;
+            skinEngine = new Sunisoft.IrisSkin.SkinEngine();
+            skinEngine.SkinAllForm = true;
             data = new Dictionary<string, DataSet>();
             data["Estate"] = new DataSet();
             data["User"] = new DataSet();
@@ -164,6 +170,7 @@ namespace EstateManagement
                 return;
             }
             int srchType = comSrchType.SelectedIndex; //得到搜索类型 按照combox里面的引索
+            //MessageBox.Show(srchType.ToString());
             switch(srchType) //0大类 1小类 2人员 3资产编号
             {
                 case -1:
@@ -176,6 +183,7 @@ namespace EstateManagement
                     break;
                 case 1:
                     DataSet ds1 = EstateOperation.GetAllEstateByCatagory(srchText, 'B');
+                    MessageBox.Show(ds1.GetXml());
                     refreshEstate(ds1);
                     break;
                 case 2:
@@ -206,6 +214,11 @@ namespace EstateManagement
         }
 
         private void EstateManage_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void extBtn_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }

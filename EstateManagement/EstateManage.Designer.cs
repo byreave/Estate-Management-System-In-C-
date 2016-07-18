@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             this.dgvEstate = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.estAddBtn = new System.Windows.Forms.Button();
             this.estEditBtn = new System.Windows.Forms.Button();
             this.estDelBtn = new System.Windows.Forms.Button();
@@ -51,11 +48,21 @@
             this.typeBtn = new System.Windows.Forms.Button();
             this.refBtn = new System.Windows.Forms.Button();
             this.changeBtn = new System.Windows.Forms.Button();
+            this.skinEngine1 = new Sunisoft.IrisSkin.SkinEngine();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.extBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEstate)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.estTab.SuspendLayout();
             this.usrTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvEstate
@@ -65,42 +72,17 @@
             this.dgvEstate.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvEstate.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEstate.Location = new System.Drawing.Point(3, 3);
+            this.dgvEstate.MultiSelect = false;
             this.dgvEstate.Name = "dgvEstate";
             this.dgvEstate.ReadOnly = true;
             this.dgvEstate.RowTemplate.Height = 23;
-            this.dgvEstate.Size = new System.Drawing.Size(541, 141);
+            this.dgvEstate.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvEstate.Size = new System.Drawing.Size(622, 141);
             this.dgvEstate.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(71, 228);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 12);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "资产管理";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(268, 228);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 12);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "人员管理";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(457, 228);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 12);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "交互操作";
             // 
             // estAddBtn
             // 
-            this.estAddBtn.Location = new System.Drawing.Point(61, 258);
+            this.estAddBtn.Location = new System.Drawing.Point(34, 30);
             this.estAddBtn.Name = "estAddBtn";
             this.estAddBtn.Size = new System.Drawing.Size(75, 23);
             this.estAddBtn.TabIndex = 4;
@@ -110,7 +92,7 @@
             // 
             // estEditBtn
             // 
-            this.estEditBtn.Location = new System.Drawing.Point(61, 302);
+            this.estEditBtn.Location = new System.Drawing.Point(34, 70);
             this.estEditBtn.Name = "estEditBtn";
             this.estEditBtn.Size = new System.Drawing.Size(75, 23);
             this.estEditBtn.TabIndex = 5;
@@ -120,7 +102,7 @@
             // 
             // estDelBtn
             // 
-            this.estDelBtn.Location = new System.Drawing.Point(61, 342);
+            this.estDelBtn.Location = new System.Drawing.Point(34, 110);
             this.estDelBtn.Name = "estDelBtn";
             this.estDelBtn.Size = new System.Drawing.Size(75, 23);
             this.estDelBtn.TabIndex = 6;
@@ -130,7 +112,7 @@
             // 
             // usrAddBtn
             // 
-            this.usrAddBtn.Location = new System.Drawing.Point(260, 258);
+            this.usrAddBtn.Location = new System.Drawing.Point(32, 30);
             this.usrAddBtn.Name = "usrAddBtn";
             this.usrAddBtn.Size = new System.Drawing.Size(75, 23);
             this.usrAddBtn.TabIndex = 7;
@@ -140,7 +122,7 @@
             // 
             // usrEditBtn
             // 
-            this.usrEditBtn.Location = new System.Drawing.Point(260, 302);
+            this.usrEditBtn.Location = new System.Drawing.Point(32, 70);
             this.usrEditBtn.Name = "usrEditBtn";
             this.usrEditBtn.Size = new System.Drawing.Size(75, 23);
             this.usrEditBtn.TabIndex = 8;
@@ -150,7 +132,7 @@
             // 
             // usrDelBtn
             // 
-            this.usrDelBtn.Location = new System.Drawing.Point(260, 342);
+            this.usrDelBtn.Location = new System.Drawing.Point(32, 110);
             this.usrDelBtn.Name = "usrDelBtn";
             this.usrDelBtn.Size = new System.Drawing.Size(75, 23);
             this.usrDelBtn.TabIndex = 9;
@@ -160,7 +142,7 @@
             // 
             // outBtn
             // 
-            this.outBtn.Location = new System.Drawing.Point(446, 258);
+            this.outBtn.Location = new System.Drawing.Point(39, 40);
             this.outBtn.Name = "outBtn";
             this.outBtn.Size = new System.Drawing.Size(75, 23);
             this.outBtn.TabIndex = 10;
@@ -170,29 +152,29 @@
             // 
             // retBtn
             // 
-            this.retBtn.Location = new System.Drawing.Point(446, 302);
+            this.retBtn.Location = new System.Drawing.Point(39, 82);
             this.retBtn.Name = "retBtn";
-            this.retBtn.Size = new System.Drawing.Size(89, 23);
+            this.retBtn.Size = new System.Drawing.Size(75, 23);
             this.retBtn.TabIndex = 11;
-            this.retBtn.Text = "查看出租信息";
+            this.retBtn.Text = "出租信息";
             this.retBtn.UseVisualStyleBackColor = true;
             this.retBtn.Click += new System.EventHandler(this.retBtn_Click);
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(446, 342);
+            this.button9.Location = new System.Drawing.Point(39, 124);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(89, 23);
+            this.button9.Size = new System.Drawing.Size(75, 23);
             this.button9.TabIndex = 12;
-            this.button9.Text = "查看归还记录";
+            this.button9.Text = "归还记录";
             this.button9.UseVisualStyleBackColor = true;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // txtSrch
             // 
-            this.txtSrch.Location = new System.Drawing.Point(270, 15);
+            this.txtSrch.Location = new System.Drawing.Point(15, 42);
             this.txtSrch.Name = "txtSrch";
-            this.txtSrch.Size = new System.Drawing.Size(100, 21);
+            this.txtSrch.Size = new System.Drawing.Size(93, 21);
             this.txtSrch.TabIndex = 13;
             // 
             // comSrchType
@@ -204,17 +186,17 @@
             "按照小类搜索",
             "按照人员搜索",
             "按照资产编号"});
-            this.comSrchType.Location = new System.Drawing.Point(398, 15);
+            this.comSrchType.Location = new System.Drawing.Point(15, 83);
             this.comSrchType.Name = "comSrchType";
-            this.comSrchType.Size = new System.Drawing.Size(87, 20);
+            this.comSrchType.Size = new System.Drawing.Size(93, 20);
             this.comSrchType.TabIndex = 14;
             this.comSrchType.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // srchBtn
             // 
-            this.srchBtn.Location = new System.Drawing.Point(492, 15);
+            this.srchBtn.Location = new System.Drawing.Point(15, 123);
             this.srchBtn.Name = "srchBtn";
-            this.srchBtn.Size = new System.Drawing.Size(75, 23);
+            this.srchBtn.Size = new System.Drawing.Size(93, 23);
             this.srchBtn.TabIndex = 15;
             this.srchBtn.Text = "搜索";
             this.srchBtn.UseVisualStyleBackColor = true;
@@ -224,10 +206,10 @@
             // 
             this.tabControl1.Controls.Add(this.estTab);
             this.tabControl1.Controls.Add(this.usrTab);
-            this.tabControl1.Location = new System.Drawing.Point(12, 39);
+            this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(555, 173);
+            this.tabControl1.Size = new System.Drawing.Size(636, 173);
             this.tabControl1.TabIndex = 16;
             // 
             // estTab
@@ -236,7 +218,7 @@
             this.estTab.Location = new System.Drawing.Point(4, 22);
             this.estTab.Name = "estTab";
             this.estTab.Padding = new System.Windows.Forms.Padding(3);
-            this.estTab.Size = new System.Drawing.Size(547, 147);
+            this.estTab.Size = new System.Drawing.Size(628, 147);
             this.estTab.TabIndex = 0;
             this.estTab.Text = "资产";
             this.estTab.UseVisualStyleBackColor = true;
@@ -247,7 +229,7 @@
             this.usrTab.Location = new System.Drawing.Point(4, 22);
             this.usrTab.Name = "usrTab";
             this.usrTab.Padding = new System.Windows.Forms.Padding(3);
-            this.usrTab.Size = new System.Drawing.Size(547, 147);
+            this.usrTab.Size = new System.Drawing.Size(628, 147);
             this.usrTab.TabIndex = 1;
             this.usrTab.Text = "人员";
             this.usrTab.UseVisualStyleBackColor = true;
@@ -259,15 +241,17 @@
             this.dgvUser.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUser.Location = new System.Drawing.Point(3, 3);
+            this.dgvUser.MultiSelect = false;
             this.dgvUser.Name = "dgvUser";
             this.dgvUser.ReadOnly = true;
             this.dgvUser.RowTemplate.Height = 23;
-            this.dgvUser.Size = new System.Drawing.Size(541, 141);
+            this.dgvUser.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvUser.Size = new System.Drawing.Size(619, 141);
             this.dgvUser.TabIndex = 0;
             // 
             // typeBtn
             // 
-            this.typeBtn.Location = new System.Drawing.Point(61, 379);
+            this.typeBtn.Location = new System.Drawing.Point(34, 150);
             this.typeBtn.Name = "typeBtn";
             this.typeBtn.Size = new System.Drawing.Size(75, 23);
             this.typeBtn.TabIndex = 17;
@@ -277,7 +261,7 @@
             // 
             // refBtn
             // 
-            this.refBtn.Location = new System.Drawing.Point(171, 15);
+            this.refBtn.Location = new System.Drawing.Point(442, 427);
             this.refBtn.Name = "refBtn";
             this.refBtn.Size = new System.Drawing.Size(75, 23);
             this.refBtn.TabIndex = 18;
@@ -287,7 +271,7 @@
             // 
             // changeBtn
             // 
-            this.changeBtn.Location = new System.Drawing.Point(260, 379);
+            this.changeBtn.Location = new System.Drawing.Point(32, 150);
             this.changeBtn.Name = "changeBtn";
             this.changeBtn.Size = new System.Drawing.Size(75, 23);
             this.changeBtn.TabIndex = 19;
@@ -295,31 +279,89 @@
             this.changeBtn.UseVisualStyleBackColor = true;
             this.changeBtn.Click += new System.EventHandler(this.changeBtn_Click);
             // 
+            // skinEngine1
+            // 
+            this.skinEngine1.@__DrawButtonFocusRectangle = true;
+            this.skinEngine1.DisabledButtonTextColor = System.Drawing.Color.Gray;
+            this.skinEngine1.DisabledMenuFontColor = System.Drawing.SystemColors.GrayText;
+            this.skinEngine1.InactiveCaptionColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.skinEngine1.SerialNumber = "";
+            this.skinEngine1.SkinFile = null;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.estAddBtn);
+            this.groupBox1.Controls.Add(this.estEditBtn);
+            this.groupBox1.Controls.Add(this.typeBtn);
+            this.groupBox1.Controls.Add(this.estDelBtn);
+            this.groupBox1.Location = new System.Drawing.Point(9, 212);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(149, 191);
+            this.groupBox1.TabIndex = 20;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "资产管理";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.changeBtn);
+            this.groupBox2.Controls.Add(this.usrAddBtn);
+            this.groupBox2.Controls.Add(this.usrEditBtn);
+            this.groupBox2.Controls.Add(this.usrDelBtn);
+            this.groupBox2.Location = new System.Drawing.Point(178, 212);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(145, 191);
+            this.groupBox2.TabIndex = 21;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "人员管理";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.retBtn);
+            this.groupBox3.Controls.Add(this.outBtn);
+            this.groupBox3.Controls.Add(this.button9);
+            this.groupBox3.Location = new System.Drawing.Point(349, 212);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(147, 191);
+            this.groupBox3.TabIndex = 22;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "交互操作";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.txtSrch);
+            this.groupBox4.Controls.Add(this.comSrchType);
+            this.groupBox4.Controls.Add(this.srchBtn);
+            this.groupBox4.Location = new System.Drawing.Point(523, 212);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(125, 191);
+            this.groupBox4.TabIndex = 23;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "搜索";
+            // 
+            // extBtn
+            // 
+            this.extBtn.Location = new System.Drawing.Point(538, 426);
+            this.extBtn.Name = "extBtn";
+            this.extBtn.Size = new System.Drawing.Size(75, 23);
+            this.extBtn.TabIndex = 24;
+            this.extBtn.Text = "退出";
+            this.extBtn.UseVisualStyleBackColor = true;
+            this.extBtn.Click += new System.EventHandler(this.extBtn_Click);
+            // 
             // EstateManage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(594, 414);
-            this.Controls.Add(this.changeBtn);
+            this.ClientSize = new System.Drawing.Size(667, 477);
+            this.Controls.Add(this.extBtn);
+            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.refBtn);
-            this.Controls.Add(this.typeBtn);
             this.Controls.Add(this.tabControl1);
-            this.Controls.Add(this.srchBtn);
-            this.Controls.Add(this.comSrchType);
-            this.Controls.Add(this.txtSrch);
-            this.Controls.Add(this.button9);
-            this.Controls.Add(this.retBtn);
-            this.Controls.Add(this.outBtn);
-            this.Controls.Add(this.usrDelBtn);
-            this.Controls.Add(this.usrEditBtn);
-            this.Controls.Add(this.usrAddBtn);
-            this.Controls.Add(this.estDelBtn);
-            this.Controls.Add(this.estEditBtn);
-            this.Controls.Add(this.estAddBtn);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox3);
             this.Name = "EstateManage";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EstateManage";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.EstateManage_FormClosing);
             this.Load += new System.EventHandler(this.EstateManage_Load);
@@ -328,17 +370,18 @@
             this.estTab.ResumeLayout(false);
             this.usrTab.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.DataGridView dgvEstate;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button estAddBtn;
         private System.Windows.Forms.Button estEditBtn;
         private System.Windows.Forms.Button estDelBtn;
@@ -358,5 +401,11 @@
         private System.Windows.Forms.Button typeBtn;
         private System.Windows.Forms.Button refBtn;
         private System.Windows.Forms.Button changeBtn;
+        private Sunisoft.IrisSkin.SkinEngine skinEngine1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Button extBtn;
     }
 }

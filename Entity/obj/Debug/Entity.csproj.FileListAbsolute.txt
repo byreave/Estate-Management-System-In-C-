@@ -7,3 +7,8 @@ C:\Users\Byreave\Desktop\WorkingSpace\Estate-Management-System-In-C-\Entity\bin\
 C:\Users\Byreave\Desktop\WorkingSpace\Estate-Management-System-In-C-\Entity\obj\Debug\Entity.csprojResolveAssemblyReference.cache
 C:\Users\Byreave\Desktop\WorkingSpace\Estate-Management-System-In-C-\Entity\obj\Debug\Entity.dll
 C:\Users\Byreave\Desktop\WorkingSpace\Estate-Management-System-In-C-\Entity\obj\Debug\Entity.pdb
+G:\C++class\Estate-Management-System-In-C--master\Entity\bin\Debug\Entity.dll
+G:\C++class\Estate-Management-System-In-C--master\Entity\bin\Debug\Entity.pdb
+G:\C++class\Estate-Management-System-In-C--master\Entity\obj\Debug\Entity.csprojResolveAssemblyReference.cache
+G:\C++class\Estate-Management-System-In-C--master\Entity\obj\Debug\Entity.dll
+G:\C++class\Estate-Management-System-In-C--master\Entity\obj\Debug\Entity.pdb
