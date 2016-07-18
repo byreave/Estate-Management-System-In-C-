@@ -87,7 +87,7 @@ namespace DAL
         public static bool EstateEdit(Estate editEstate, string EstateID)
         {
             string sql = "UPDATE Estate SET EstateName = @EstateName, TypeBID = '"+editEstate.TypeBID+"', Model=@Model, Price=@Price, PurchaseDate='"+editEstate.PurchaseDate+"', Status='"+editEstate.Status+"', Username='"+editEstate.Username+"', Comment = @Comment";
-            sql += "WHERE EID = '"+EstateID+"'";
+            sql += " WHERE EID = '"+EstateID+"'";
             //加入防注入
             SqlParameter[] paras = new SqlParameter[] { new SqlParameter("@EstateName", editEstate.EstateName), new SqlParameter("@Model", editEstate.Model), new SqlParameter("@Price", editEstate.Price.ToString()), new SqlParameter("@Comment", editEstate.Comment) };
 
