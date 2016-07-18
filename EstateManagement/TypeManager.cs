@@ -87,14 +87,19 @@ namespace EstateManagement
         private void delBtn_Click(object sender, EventArgs e)
         {
             string str = dgvTypeA.SelectedCells[0].Value.ToString();
-            string strB = dgvTypeB.SelectedCells[0].Value.ToString();
-            if(str != "" && strB == "")
+            bool isDeletingTypeA = !(dgvTypeB.SelectedCells.Count > 0);
+            string strB = "";
+            if(!isDeletingTypeA)
+            {
+                strB = dgvTypeB.SelectedCells[0].Value.ToString();
+            }
+            if(str != "" && isDeletingTypeA)
             {
                 EstateOperation.TypeADelete(str);
                 MessageBox.Show("删除大类成功");
                 refreshTypeA();
             }
-            else if(strB != "" && str != "" )
+            else if(!isDeletingTypeA && str != "" )
             {
                 EstateOperation.TypeBDelete(strB);
                 MessageBox.Show("删除小类成功");
